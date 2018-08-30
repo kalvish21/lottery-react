@@ -26,7 +26,7 @@ class App extends Component {
     onSubmit = async (event) => {
         event.preventDefault();
 
-        this.setState({message: 'Waiting on trasaction success...'});
+        this.setState({message: 'Waiting on transaction success...'});
 
         const accounts = await web3.eth.getAccounts();
         await lottery.methods.enter().send({
